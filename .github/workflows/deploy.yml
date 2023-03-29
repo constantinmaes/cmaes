@@ -22,7 +22,7 @@ jobs:
             - run: npm ci
             - run: npm run build --if-present
     launch-with-pm2:
-        needs: [migrate]
+        needs: [build]
         runs-on: self-hosted
         steps:
             - name: Launch app with PM2
